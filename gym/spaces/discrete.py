@@ -10,7 +10,7 @@ class Discrete(gym.Space):
     """
     def __init__(self, n):
         self.n = n
-        gym.Space.__init__(self, (), np.int64)
+        gym.Space.__init__(self, (1, ), np.int64)
 
     def sample(self):
         return gym.spaces.np_random.randint(self.n)
